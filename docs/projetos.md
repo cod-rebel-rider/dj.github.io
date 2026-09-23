@@ -2,12 +2,11 @@
 
 ## Cod Rebel DJ
 
-Projeto principal de DJ.
+Meu trabalho principal como DJ.
 
 ## Bailão do Rock
 
-Evento/projeto baseado na mistura
-de Rock + Funk.
+Uma ideia de evento que junta Rock e Funk.
 
 ## Sets
 
@@ -19,4 +18,4 @@ Futuros edits, mashups e remixes.
 
 ## Fallen EV Tributo
 
-Projeto musical paralelo.
+Trabalho musical paralelo.
