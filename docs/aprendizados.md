@@ -10,13 +10,7 @@ Aprendi que preparar um set de 1h é diferente de simplesmente montar uma playli
 
 A Hercules DJ Control Air é suficiente para começar, mas possui limitações para determinadas situações. A que eu comprei eu identifiquei alguns defeitos. Precisei mapear manualmente a controladora no MIXXX ([cod-rebel-rider/hercules-dj-control-air-docs](https://github.com/cod-rebel-rider/hercules-dj-control-air-docs))
 
-Equipamentos que comprei (atualizado 23/09/2026)
-- [Capa Bag Case Teclado 5/8 PSR Acolchoada Impermeável](https://s.shopee.com.br/3B7dymfX1j)
-- [Cabo Audio Estéreo P2 Para 2 P10 Mono Vention](https://s.shopee.com.br/4fwRlXZoz2)
-- [Cabo Para Guitarra Violão 3m Metros Blindado P10 P10 Têxtil](https://s.shopee.com.br/4qFrxqZBe5)
-- [VEDO Misturador Mini Mixer De Áudio Portátil 12/8/7 Canais Mixer de placa de som com Bluetooth USB Música Podcast](https://s.shopee.com.br/50ZIA9YYJ8)
-- [AMW Master 25 All Black Teclado Controlador Midi 9 PADs 8 Knobs Visor OLED](https://s.shopee.com.br/5AsiMSXuyB)
--
+Uso um cabo p10/p10 mandar a saida direita (mono/vs) da minha mesa de mixagem a mesa do lugar onde toco. O cabo p2/p10 serve pra mandar a saida esquerda (mono/metronomo) para o transmissor sem fio que vai pro fone do ouvido dos musicos (esse é quando eu toco com a Fallen). O cabo p2/ 2p10 estéreo pra saida esterio do notebook para a mesa, nessa cada lado fica conctado a um canal diferente, o canal do VS eu ajusto o Pan pra ir pra saida direita e o canal com o metronomo eu mando pra saida esquerda. O fone de ouvido que eu uso conecto na saída AUX, escolher qual canal escutar pois basta ajustar o volume do AUX.
 
 ### Eventos
 
@@ -25,10 +19,5 @@ Coisas que eu levo pros eventos
 - Mesa de mixagem
 - MIDI (teclado, pads e knobs)
 - Controladora Hercules DJ Control Air
-- PA disponível;
-- conexões;
-- espaço;
-- horário;
-- duração;
-- passagem de som;
-- transporte.
+- Cabos (p2/p10, p10/p10, p2/p10L_p10R e RCA) 
+- Notebook
