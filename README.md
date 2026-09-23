@@ -258,27 +258,28 @@ Se este projeto ajudar outro DJ, músico ou artista a começar seu próprio cami
 
 O código-fonte deste projeto é disponibilizado sob a **MIT License**.
 
-Isso permite que outras pessoas estudem, utilizem, modifiquem e distribuam o código, respeitando as condições da licença.
+Isso permite que outras pessoas estudem, utilizem, modifiquem e distribuam o código, desde que respeitem as condições da licença.
 
-### Conteúdo artístico
+### Conteúdo e marca
 
-A licença MIT **não se aplica automaticamente** aos seguintes materiais:
+A MIT não cobre automaticamente conteúdos pessoais, autorais, de marca e de identidade artística presentes neste repositório.
 
-* fotografias;
-* vídeos;
+Dessa forma, o seguinte permanece protegido:
+
 * textos autorais;
-* identidade visual;
-* logotipos;
+* narrativas pessoais e profissionais;
+* biografia e trajetória;
+* imagens, vídeos e artes;
+* identidade visual e elementos de marca;
 * nome artístico;
-* marca;
-* artes promocionais;
-* materiais de divulgação;
-* gravações;
-* outros conteúdos artísticos ou pessoais presentes neste repositório.
+* materiais promocionais e de divulgação;
+* conteúdos que descrevem ou representam o artista e o projeto.
 
-Esses materiais permanecem protegidos pelos direitos autorais aplicáveis, salvo quando houver indicação expressa de uma licença diferente.
+Esses materiais não podem ser reutilizados como parte de uma identidade de marca, campanha ou projeto derivado sem autorização prévia por escrito.
 
-> **O código é aberto. A identidade artística não.**
+> **O código é aberto. A identidade artística, a marca e o conteúdo pessoal são protegidos.**
+
+Para regras detalhadas, consulte [CONTENT_AND_BRAND_POLICY.md](CONTENT_AND_BRAND_POLICY.md).
 
 ---
 
