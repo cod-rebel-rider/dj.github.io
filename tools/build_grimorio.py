@@ -11,8 +11,8 @@ Regras do projeto que este script respeita:
 
 * os arquivos `.md` em `docs/` são a **fonte de verdade** e nunca são
   alterados por este script (apenas lidos);
-* nada é inventado: o HTML gerado é o documento convertido, com o caminho
-  da fonte visível em cada página;
+* nada é inventado: o HTML gerado é o documento convertido para leitura no site;
+  os detalhes do fluxo ficam na documentação de manutenção;
 * sem dependências externas (somente biblioteca padrão do Python 3.9+);
 * site estático, compatível com GitHub Pages: nenhum backend é necessário.
 
@@ -68,7 +68,7 @@ CATEGORIES = [
     ("registros", "Registros", "O que já aconteceu, com data e local."),
     ("estrutura", "Estrutura", "Equipamentos, cabos, montagem e o que falta."),
     ("projetos", "Projetos", "Projetos paralelos e experimentos."),
-    ("log", "Log técnico", "Aprendizados, erros e decisões."),
+    ("log", "Aprendizados", "Erros, decisões e o que funcionou na prática."),
 ]
 
 DOCS = [
@@ -83,7 +83,7 @@ DOCS = [
     Doc("equipamentos", "docs/equipamentos.md", "Equipamentos", "estrutura",
         "Controladora, notebook, controlador MIDI, mixer, cabos e as próximas aquisições."),
     Doc("projetos", "docs/projetos.md", "Projetos", "projetos",
-        "O projeto principal, sets autorais, produção e projetos paralelos."),
+        "Minha frente principal, meus sets autorais, produção e projetos paralelos."),
     Doc("fallen", "docs/fallen.md", "Fallen EV Tributo", "projetos",
         "Tributo ao Evanescence: atuação como DJ e experiência de palco."),
     Doc("aprendizados", "docs/aprendizados.md", "Aprendizados", "log",
@@ -537,12 +537,14 @@ def site_footer(prefix: str) -> str:
       </div>
 
       <div class="foot-col">
-        <h2>Fontes e registros</h2>
+        <h2>Mais do site</h2>
         <ul class="foot-list">
-          <li><a href="{prefix}docs/cod-rebel-dj.md">docs/cod-rebel-dj.md</a></li>
-          <li><a href="{prefix}docs/aprendizados.md">docs/aprendizados.md</a></li>
+          <li><a href="{prefix}grimorio.html">Grimório completo</a></li>
           <li><a href="{REPO_URL}" rel="noopener">Repositório no GitHub</a></li>
           <li><a href="https://github.com/cod-rebel-rider/hercules-dj-control-air-docs" rel="noopener">Mapeamento Hercules DJ Control Air</a></li>
+          <li><a href="{prefix}shows.html">Shows registrados</a></li>
+          <li><a href="{prefix}contato.html">Contato</a></li>
+          <li><a href="{prefix}apoie.html">Apoie o trabalho</a></li>
         </ul>
       </div>
     </div>
@@ -597,7 +599,6 @@ def build_page_index(ordered: list[Doc]) -> str:
           <p class="row__index">/{pos:02d}</p>
           <h3 class="row__title"><a href="grimorio/{doc.slug}.html">{esc(doc.title)}</a></h3>
           <p class="row__text">{esc(doc.summary)}</p>
-          <p class="row__meta">Fonte: {esc(doc.source)}</p>
         </article>""")
         groups.append(f"""      <section style="margin-bottom: clamp(2rem, 5vw, 3rem);">
         <h2 class="label">// {esc(name)}</h2>
@@ -609,7 +610,7 @@ def build_page_index(ordered: list[Doc]) -> str:
 
     listing = "\n".join(
         "            <p class=\"terminal__line\"><a href=\"grimorio/%s.html\">%s</a>"
-        "<span class=\"c\">  %s</span></p>" % (doc.slug, esc(Path(doc.source).name), esc(doc.title))
+        "<span class=\"c\">  abrir registro</span></p>" % (doc.slug, esc(doc.title))
         for doc in ordered
     )
 
@@ -630,8 +631,8 @@ def build_page_index(ordered: list[Doc]) -> str:
       <div class="split">
         <div class="terminal">
           <div class="terminal__bar">
-            <span>ls -1 docs/</span>
-            <span>{len(ordered)} arquivos</span>
+            <span>grimório · registros</span>
+            <span>{len(ordered)} registros</span>
           </div>
           <div class="terminal__body">
 {listing}
@@ -641,8 +642,8 @@ def build_page_index(ordered: list[Doc]) -> str:
         <div class="note">
           <p class="note__title">O que tem aqui dentro</p>
           <p>
-            Identidade, repertório, trajetória, shows, equipamentos, projetos e os aprendizados
-            técnicos. Também tem espaço em branco: parte disso ainda está sendo preenchida.
+            Identidade, repertório, trajetória, shows, equipamentos, projetos e o que eu aprendi
+            na prática. Também tem espaço em branco: parte disso ainda está sendo preenchida.
           </p>
           <p class="small">
             Nada foi inventado para ficar bonito. Se a informação não existe, o buraco aparece.
@@ -657,9 +658,9 @@ def build_page_index(ordered: list[Doc]) -> str:
   </section>"""
 
     return page(
-        "Grimório · documentação aberta do Cod Rebel DJ",
-        "Documentação do trabalho do Cod Rebel DJ: identidade, repertório, trajetória, shows, "
-        "equipamentos, projetos e aprendizados, publicados sem filtro.",
+        "Grimório · meu caderno de campo",
+        "Meu caderno de campo: identidade, repertório, trajetória, shows, equipamentos, "
+        "projetos e aprendizados, publicados sem filtro.",
         SITE_URL + "grimorio.html",
         "grimorio",
         "",
@@ -713,7 +714,7 @@ def build_doc_page(doc: Doc, markdown: str, position: int, ordered: list[Doc]) -
         <h1 class="section__title section__title--mono">{esc(doc.title)}</h1>
         <p class="lede" style="margin-top: 1rem;">{esc(doc.summary)}</p>
         <ul class="doc-head__meta">
-          <li><b>Fonte</b> <a href="../{esc(doc.source)}">{esc(doc.source)}</a></li>
+          <li><b>Registro</b> aberto</li>
           <li><b>Atualizado</b> {esc(updated)}</li>
           <li><b>Leitura</b> ~{minutes} min</li>
         </ul>

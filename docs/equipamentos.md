@@ -121,7 +121,7 @@ A mesa também facilita transporte e montagem/desmontagem da estrutura.
 
 ## 🏗️ Estrutura própria
 
-A proposta é desenvolver gradualmente uma estrutura própria para apresentações, reduzindo a dependência de equipamentos fornecidos pelos locais e permitindo maior controle sobre a montagem.
+Quero desenvolver gradualmente uma estrutura própria para apresentações, reduzindo a dependência de equipamentos fornecidos pelos locais e permitindo maior controle sobre a montagem.
 
 ### Situação atual
 

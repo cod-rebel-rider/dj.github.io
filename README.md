@@ -125,9 +125,8 @@ manutenção) **não aparece para o visitante**. Quem visita o site lê os docum
 mantém o site lê este README e `tools/README.md`.
 
 Ao editar os templates de `tools/build_grimorio.py`, mantenha a separação: nada de
-comandos, caminhos de script ou explicação de pipeline no HTML publicado. Links para o
-arquivo original do documento (por exemplo, `docs/shows.md`) continuam permitidos: fazem
-parte do princípio de transparência do site.
+comandos, caminhos de script, nomes de arquivos `.md` ou explicação de pipeline no HTML
+publicado. Os links do Grimório devem apontar para outras páginas do site.
 
 ---
 
@@ -171,9 +170,9 @@ qualquer profundidade de URL. Testando localmente, os links dela não funcionam 
 
 * **URL:** `https://cod-rebel-rider.github.io/dj.github.io/`
 * **Tipo:** site de projeto, servido a partir da **raiz** do branch publicado.
-* **Publicação:** feita pelo GitHub Pages, com a origem configurada em *Settings › Pages*
-  (opção `Deploy from a branch`), apontando para o branch que contém o site e para a pasta
-  `/` (raiz).
+* **Publicação:** feita pelo GitHub Pages a partir da raiz do repositório, usando a branch
+  configurada nas *Settings › Pages* do próprio repositório. Este checkout não contém
+  workflow ou configuração local de publicação;
 * **404:** o `404.html` da raiz é usado automaticamente.
 * **`CNAME`:** não existe. Sem domínio próprio, a URL do Pages é a oficial, e é ela que
   aparece em `canonical`, `og:url` e no `sitemap.xml`.
@@ -184,8 +183,8 @@ qualquer profundidade de URL. Testando localmente, os links dela não funcionam 
 * Páginas em `projetos/<slug>/` e em `grimorio/` usam `../../` e `../`. Nas páginas do
   Grimório esse prefixo é definido pelo gerador (parâmetro `prefix`).
 * Evite nome de arquivo com acento ou espaço em páginas novas. `docs/repertório.md` só
-  funciona bem porque o gerador cria `grimorio/repertorio.html` (slug sem acento) e mantém
-  o link para o `.md` original.
+  funciona bem porque o gerador cria `grimorio/repertorio.html` (slug sem acento).
+  O caminho do Markdown fica apenas na documentação de manutenção, não no HTML público.
 * Se a URL do site mudar: troque `SITE_URL` em `tools/build_grimorio.py`, rode o gerador e
   ajuste `canonical`/`og:url` das páginas escritas à mão e o prefixo absoluto do `404.html`.
 
@@ -230,7 +229,7 @@ Pontos que valem para qualquer edição:
 
 O site fala em **primeira pessoa**, como o artista falando de si. Regras práticas:
 
-* sem travessão longo (U+2014) em texto, título, descrição, card, rodapé ou no Grimório.
+* **sem travessão longo** (U+2014) em texto, título, descrição, card, rodapé ou no Grimório.
   Use vírgula, dois pontos, parênteses ou quebra de frase;
 * evitar linguagem institucional ("o objetivo deste projeto é", "a proposta consiste em");
 * usar "projeto" só quando ajudar a explicar algo. Prefira "meu trabalho", "meus sets",
@@ -261,10 +260,11 @@ Ficam como espaço reservado, marcado no próprio site, até existir informaçã
 ## Branches
 
 * `tarefa/site`: desenvolvimento do site.
-* `main`: publicação.
+* `main`: branch principal do repositório; não deve receber merge automático nesta etapa.
 
-O desenvolvimento acontece em `tarefa/site`. O merge para `main` é decisão manual, depois
-de revisão, e não deve ser feito automaticamente.
+O desenvolvimento acontece em `tarefa/site`. A branch efetivamente publicada é a configurada no
+GitHub Pages; este repositório não contém essa configuração. Qualquer merge para `main` é uma
+decisão manual, depois de revisão.
 
 ---
 

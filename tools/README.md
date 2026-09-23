@@ -28,8 +28,8 @@ Não precisa instalar nada: usa apenas a biblioteca padrão do Python 3.9+.
 ### Regras que o script respeita
 
 * **os `.md` são somente leitura**: o script nunca altera `docs/`;
-* **nada é inventado**: a página gerada é o documento convertido, com o caminho da
-  fonte visível no cabeçalho;
+* **nada é inventado**: a página gerada é o documento convertido para leitura; caminhos,
+  comandos e detalhes do fluxo ficam fora da interface;
 * sem dependências externas, sem backend: o site continua estático.
 
 ### Adicionar um documento novo
@@ -52,8 +52,7 @@ projeto. Ao usar algo fora disso, confira o resultado depois de gerar.
 
 * o primeiro título `#` do `.md` é descartado (`skip_first_h1`), porque o título já aparece
   no cabeçalho da página;
-* cabeçalho com o caminho da fonte, a data do último commit que tocou o `.md` e a estimativa
-  de leitura;
+* metadados de leitura: data da última atualização e estimativa de leitura;
 * índice de seções (quando o documento tem 3 ou mais títulos de nível 2);
 * navegação anterior/próximo entre os documentos, na ordem de `CURATED_ORDER`.
 
@@ -61,9 +60,10 @@ projeto. Ao usar algo fora disso, confira o resultado depois de gerar.
 
 As páginas geradas são lidas por visitantes. Portanto:
 
-* **não** publicar comando de manutenção, nome de script ou explicação de como o HTML é
-  produzido (Markdown, geração, pipeline). Isso vive aqui e no `README.md` da raiz;
-* links para o `.md` original são permitidos, fazem parte da transparência do site;
+* não publicar caminho de arquivo, comando de manutenção, nome de script ou explicação de
+  como o HTML é produzido (Markdown, geração, pipeline). Isso vive aqui e no `README.md` da raiz;
+* links para documentos devem apontar para as páginas públicas do Grimório, nunca para o
+  caminho do arquivo `.md`;
 * texto novo segue a voz do site: primeira pessoa, sem travessão longo (U+2014) e sem
   linguagem institucional.
 
