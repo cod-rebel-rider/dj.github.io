@@ -255,24 +255,61 @@ Ficam como espaço reservado, marcado no próprio site, até existir informaçã
 * presskit em `assets/presskit/`;
 * fotos reais de apresentações e do setup (`registro-placeholder.svg`).
 
----
-
-## Branches
-
-* `tarefa/site`: desenvolvimento do site.
-* `main`: branch principal do repositório; não deve receber merge automático nesta etapa.
-
-O desenvolvimento acontece em `tarefa/site`. A branch efetivamente publicada é a configurada no
-GitHub Pages; este repositório não contém essa configuração. Qualquer merge para `main` é uma
-decisão manual, depois de revisão.
 
 ---
 
-## Licença
+## 📜 Licença
 
-* **Código:** MIT. Veja `LICENSE`.
-* **Identidade e conteúdo artístico** (textos, marca, artes, imagens, gravações): todos os
-  direitos reservados. A licença do código não se aplica a eles.
+### Código
+
+O código-fonte deste projeto é disponibilizado sob a **MIT License**.
+
+Isso permite que outras pessoas estudem, utilizem, modifiquem e distribuam o código, desde que respeitem as condições da licença.
+
+### Conteúdo e marca
+
+A MIT não cobre automaticamente conteúdos pessoais, autorais, de marca e de identidade artística presentes neste repositório.
+
+Dessa forma, o seguinte permanece protegido:
+
+* textos autorais;
+* narrativas pessoais e profissionais;
+* biografia e trajetória;
+* imagens, vídeos e artes;
+* identidade visual e elementos de marca;
+* nome artístico;
+* materiais promocionais e de divulgação;
+* conteúdos que descrevem ou representam o artista e o projeto.
+
+Esses materiais não podem ser reutilizados como parte de uma identidade de marca, campanha ou projeto derivado sem autorização prévia por escrito.
+
+> **O código é aberto. A identidade artística, a marca e o conteúdo pessoal são protegidos.**
+
+Para regras detalhadas, consulte [CONTENT_AND_BRAND_POLICY.md](CONTENT_AND_BRAND_POLICY.md).
+
+---
+
+## 👤 Autor
+
+**Matheus Rodrigues**
+
+**Cod Rebel DJ**
+
+Projeto artístico independente.
+
+---
+
+## 🚧 Status
+
+**Em construção.**
+
+Este repositório acompanha uma carreira em desenvolvimento. A estrutura, o site, os projetos e os objetivos serão atualizados conforme a trajetória avançar.
+
+---
+
+> **Não é um portfólio de onde eu cheguei.**
+>
+> **É o registro de onde estou tentando chegar.**
 
 ---
 
