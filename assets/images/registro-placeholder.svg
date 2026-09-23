@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="Registro visual ainda não disponível: espaço reservado para foto ou vídeo do Cod Rebel DJ">
+  <rect width="960" height="540" fill="#0c0c10"/>
+  <rect x="1" y="1" width="958" height="538" fill="none" stroke="#232329"/>
+  <rect x="28.5" y="28.5" width="903" height="483" fill="none" stroke="#e0231c" stroke-opacity=".5" stroke-width="1" stroke-dasharray="10 8"/>
+
+  <g fill="none" stroke="#34343e" stroke-width="1.5">
+    <rect x="404" y="196" width="152" height="104"/>
+    <path d="M404 232h-26v40h26M556 232h26v40h-26"/>
+    <circle cx="480" cy="248" r="26"/>
+    <path d="M470 214l10-18 10 18"/>
+  </g>
+  <circle cx="480" cy="248" r="9" fill="#e0231c"/>
+
+  <g font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, monospace" text-anchor="middle">
+    <text x="480" y="132" fill="#ff5340" font-size="19" letter-spacing="4">REGISTRO VISUAL PENDENTE</text>
+    <text x="480" y="352" fill="#ece8e4" font-size="15" letter-spacing="2.5">ESPA&#199;O RESERVADO PARA FOTO OU V&#205;DEO REAL</text>
+    <text x="480" y="384" fill="#98938c" font-size="13" letter-spacing="2">NENHUMA IMAGEM FOI INVENTADA AQUI</text>
+    <text x="480" y="428" fill="#98938c" font-size="12" letter-spacing="2">SUBSTITUIR POR MATERIAL DE APRESENTA&#199;&#195;O</text>
+  </g>
+
+  <g stroke="#232329" stroke-width="1">
+    <path d="M28 60h60M28 480h60M872 60h60M872 480h60"/>
+  </g>
+</svg>

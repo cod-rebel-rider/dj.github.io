@@ -1,0 +1,66 @@
+# tools
+
+Ferramentas do site. Hoje existe uma só.
+
+## `build_grimorio.py`
+
+Converte os documentos Markdown de `docs/` nas páginas HTML do **Grimório Digital** e
+gera `sitemap.xml` e `robots.txt`.
+
+```bash
+python3 tools/build_grimorio.py
+```
+
+Não precisa instalar nada: usa apenas a biblioteca padrão do Python 3.9+.
+
+### O que ele gera
+
+| Saída | Origem |
+| --- | --- |
+| `grimorio/<slug>.html` | cada arquivo `.md` registrado em `DOCS` |
+| `grimorio.html` | índice montado a partir de `DOCS` e `CATEGORIES` |
+| `sitemap.xml` | todas as páginas do site que existem no disco |
+| `robots.txt` | aponta para o sitemap |
+
+### Regras que o script respeita
+
+* **os `.md` são somente leitura** — o script nunca altera `docs/`;
+* **nada é inventado**: a página gerada é o documento convertido, com o caminho da
+  fonte visível no cabeçalho e no rodapé;
+* sem dependências externas, sem backend — o site continua estático.
+
+### Adicionar um documento novo
+
+1. crie o arquivo em `docs/`;
+2. registre-o em `DOCS` (e em `CURATED_ORDER`) dentro de `tools/build_grimorio.py`;
+3. rode o script;
+4. commite o `.md`, as páginas geradas e o `sitemap.xml` juntos.
+
+Se um `.md` existir em `docs/` e não estiver registrado, o script avisa no terminal.
+
+### Markdown suportado
+
+Títulos (`#` a `####`), parágrafos, negrito, itálico, links, código inline, blocos de
+código cercados, listas ordenadas e não ordenadas (com aninhamento), tabelas com
+alinhamento, citações e linhas horizontais — o subconjunto usado pelos documentos do
+projeto. Ao usar algo fora disso, confira o resultado depois de gerar.
+
+## Endereço do site
+
+`SITE_URL`, no topo do script, e as URLs `canonical`/`og:` das páginas escritas à mão
+apontam para `https://cod-rebel-rider.github.io/dj.github.io/`.
+
+Se um domínio próprio for configurado:
+
+1. troque `SITE_URL` no script e rode-o de novo;
+2. busque e substitua `https://cod-rebel-rider.github.io/dj.github.io/` nos arquivos
+   `.html` da raiz, em `projetos/` e em `grimorio/`;
+3. troque o prefixo `/dj.github.io/` usado nos links absolutos de `404.html`.
+
+## Imagem de compartilhamento
+
+`assets/images/og.png` é gerada a partir de `assets/images/og.svg`:
+
+```bash
+rsvg-convert -w 1200 -h 630 -b '#08080a' assets/images/og.svg -o assets/images/og.png
+```

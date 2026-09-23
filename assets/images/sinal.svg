@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="sig-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="240" fill="url(#sig-grid)"/>
+  <line x1="0" y1="120" x2="800" y2="120" stroke="#232329" stroke-width="1"/>
+
+  <!-- sinal de fundo -->
+  <path d="M0 120H96L114 98 132 144 150 120H300L320 86 344 162 362 120H520L540 102 558 140 574 120H800"
+        fill="none" stroke="#34343e" stroke-width="1.5"/>
+
+  <!-- sinal principal -->
+  <path d="M0 120H52L70 120 86 74 104 186 120 120H210L226 44 250 206 268 120H340L356 96 372 150 388 120H470L486 62 508 196 524 120H610L626 108 642 134 656 120H800"
+        fill="none" stroke="#e0231c" stroke-width="2" stroke-linejoin="miter"/>
+
+  <!-- marcas -->
+  <g fill="#98938c" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" letter-spacing="1.5">
+    <text x="14" y="26">SIG.IN</text>
+    <text x="700" y="26">SIG.OUT</text>
+    <text x="14" y="228" fill="#ff5340">SIGNAL FOUND</text>
+    <text x="640" y="228">0 Hz &#8594; ?</text>
+  </g>
+
+  <g stroke="#232329" stroke-width="1">
+    <path d="M14 34v12"/>
+    <path d="M786 34v12"/>
+  </g>
+</svg>

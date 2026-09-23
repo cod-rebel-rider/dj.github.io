@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Cod Rebel DJ — Rock, Funk, Electronic. DJ, produção musical, tecnologia e experimentação.">
+  <defs>
+    <radialGradient id="stage" cx="16%" cy="-8%" r="80%">
+      <stop offset="0%" stop-color="#e0231c" stop-opacity=".40"/>
+      <stop offset="62%" stop-color="#e0231c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="og-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#08080a"/>
+  <rect width="1200" height="630" fill="url(#og-grid)"/>
+  <rect width="1200" height="630" fill="url(#stage)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#e0231c"/>
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#232329"/>
+
+  <g stroke="#e0231c" stroke-width="7" stroke-linecap="butt">
+    <path d="M112 96 88 166"/>
+    <path d="M144 96 120 166"/>
+  </g>
+
+  <text x="200" y="166" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace"
+        font-size="96" font-weight="bold" letter-spacing="2" fill="#ece8e4">COD REBEL <tspan fill="#e0231c">DJ</tspan></text>
+
+  <line x1="112" y1="222" x2="1088" y2="222" stroke="#34343e" stroke-width="2"/>
+
+  <text x="112" y="292" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace"
+        font-size="34" letter-spacing="9" fill="#ece8e4">ROCK // FUNK // ELECTRONIC</text>
+
+  <text x="112" y="342" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace"
+        font-size="24" letter-spacing="5" fill="#98938c">DJ · PRODUÇÃO · TECNOLOGIA · EXPERIMENTAÇÃO</text>
+
+  <path d="M112 452H300L320 412 344 494 362 452H470L492 406 516 498 534 452H700L720 434 740 470 756 452H1088"
+        fill="none" stroke="#e0231c" stroke-width="3"/>
+
+  <text x="112" y="566" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace"
+        font-size="19" letter-spacing="3" fill="#ff5340">SIGNAL FOUND</text>
+  <text x="1088" y="566" font-family="ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace"
+        font-size="19" letter-spacing="3" fill="#98938c" text-anchor="end">cod-rebel-rider.github.io/dj.github.io</text>
+</svg>
