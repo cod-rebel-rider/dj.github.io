@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COD REBEL DJ — SISTEMA VISUAL
+   COD REBEL DJ · SISTEMA VISUAL
    Estático. Sem dependências. Preto / vermelho / cinza / branco.
    Referências: terminal, caderno técnico, documentação de projeto, flyer.
    ========================================================================== */
@@ -497,7 +497,7 @@ button { font: inherit; color: inherit; }
 
 /* 8. LISTAS DE DOCUMENTAÇÃO / ENTRADAS
    ========================================================================== */
-/* grade com fios de 1px entre células — linguagem de documento, não de card */
+/* grade com fios de 1px entre células: linguagem de documento, não de card */
 .rows {
   display: grid;
   gap: 1px;
@@ -570,7 +570,7 @@ button { font: inherit; color: inherit; }
 .specs dd { margin: 0; color: var(--ink-2); }
 .specs dd strong { color: var(--ink); }
 
-/* 9. PROSA — texto vindo dos documentos (.md)
+/* 9. PROSA · texto vindo dos documentos (.md)
    ========================================================================== */
 .prose {
   max-width: 72ch;

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COD REBEL DJ — comportamento mínimo
+   COD REBEL DJ · comportamento mínimo
    Só o que HTML/CSS não resolvem: menu no celular e entrada discreta de
    elementos. Sem dependências. Se este arquivo não carregar, o site continua
    legível e navegável (o menu fica aberto por padrão).

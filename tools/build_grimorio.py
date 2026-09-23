@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gerador do Grimório Digital — Cod Rebel DJ.
+"""Gerador do Grimório Digital · Cod Rebel DJ.
 
 Fecha a ponte entre a documentação do repositório e o site publicado:
 
@@ -14,7 +14,7 @@ Regras do projeto que este script respeita:
 * nada é inventado: o HTML gerado é o documento convertido, com o caminho
   da fonte visível em cada página;
 * sem dependências externas (somente biblioteca padrão do Python 3.9+);
-* site estático, compatível com GitHub Pages — nenhum backend é necessário.
+* site estático, compatível com GitHub Pages: nenhum backend é necessário.
 
 Uso:
 
@@ -63,7 +63,7 @@ class Doc:
 
 
 CATEGORIES = [
-    ("identidade", "Identidade", "Quem é o projeto, o que toca e onde quer chegar."),
+    ("identidade", "Identidade", "Quem eu sou, o que eu toco e onde eu quero chegar."),
     ("som", "Som", "Gêneros, referências e formatos de apresentação."),
     ("registros", "Registros", "O que já aconteceu, com data e local."),
     ("estrutura", "Estrutura", "Equipamentos, cabos, montagem e o que falta."),
@@ -77,15 +77,15 @@ DOCS = [
     Doc("repertorio", "docs/repertório.md", "Repertório", "som",
         "Gêneros e referências que atravessam o set, do Rock ao Funk."),
     Doc("trajetoria", "docs/trajetoria.md", "Trajetória", "registros",
-        "Linha do tempo do projeto e os próximos objetivos."),
+        "Linha do tempo do que já aconteceu e os próximos objetivos."),
     Doc("shows", "docs/shows.md", "Shows", "registros",
         "Registros das apresentações realizadas, com local, formato e público estimado."),
     Doc("equipamentos", "docs/equipamentos.md", "Equipamentos", "estrutura",
         "Controladora, notebook, controlador MIDI, mixer, cabos e as próximas aquisições."),
     Doc("projetos", "docs/projetos.md", "Projetos", "projetos",
-        "Projeto principal, sets autorais, produção e projetos paralelos."),
+        "O projeto principal, sets autorais, produção e projetos paralelos."),
     Doc("fallen", "docs/fallen.md", "Fallen EV Tributo", "projetos",
-        "Projeto de tributo ao Evanescence: atuação e experiência adquirida."),
+        "Tributo ao Evanescence: atuação como DJ e experiência de palco."),
     Doc("aprendizados", "docs/aprendizados.md", "Aprendizados", "log",
         "Set flexível, mapeamento MIDI, roteamento de áudio e lições de palco."),
 ]
@@ -469,7 +469,7 @@ def page_head(title: str, description: str, canonical: str, prefix: str, current
 <meta property="og:image" content="{og_image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Cod Rebel DJ — Rock // Funk // Electronic">
+<meta property="og:image:alt" content="Cod Rebel DJ · Rock, Funk e Electronic">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{url_title}">
 <meta name="twitter:description" content="{url_desc}">
@@ -526,7 +526,7 @@ def site_footer(prefix: str) -> str:
       <div class="foot-col">
         <p class="foot-brand"><span>//</span> Cod Rebel DJ</p>
         <p>Rock para bater. Funk para dançar. Industrial para pesar. Tecnologia para experimentar.</p>
-        <p class="small"><span class="status-dot" aria-hidden="true"></span>Em construção — documentado em tempo real.</p>
+        <p class="small"><span class="status-dot" aria-hidden="true"></span>Em construção, documentado em tempo real.</p>
       </div>
 
       <div class="foot-col">
@@ -618,12 +618,12 @@ def build_page_index(ordered: list[Doc]) -> str:
 {crumbs("", "Grimório")}
 
       <div class="section__head">
-        <p class="label">// Grimório digital <span>· documentos do projeto</span></p>
+        <p class="label">// Grimório <span>· caderno de campo</span></p>
         <h1 class="section__title">Caderno de campo, aberto</h1>
         <p class="lede" style="margin-top: 1rem;">
-          Tudo o que este projeto sabe sobre si mesmo está escrito em arquivos Markdown dentro
-          do repositório — e publicado aqui. Não é bastidor editado: são os documentos como
-          eles são, inclusive as partes incompletas.
+          Aqui está o que eu escrevo sobre o trabalho, do jeito que eu escrevi: identidade,
+          repertório, shows, equipamentos, projetos e o que eu aprendi apanhando. Não é bastidor
+          editado, inclusive nas partes que ainda estão em branco.
         </p>
       </div>
 
@@ -639,14 +639,13 @@ def build_page_index(ordered: list[Doc]) -> str:
         </div>
 
         <div class="note">
-          <p class="note__title">Como funciona</p>
+          <p class="note__title">O que tem aqui dentro</p>
           <p>
-            Cada página deste grimório é gerada a partir do arquivo <code>.md</code>
-            correspondente. O Markdown é a fonte de verdade: o HTML é só a leitura dele.
+            Identidade, repertório, trajetória, shows, equipamentos, projetos e os aprendizados
+            técnicos. Também tem espaço em branco: parte disso ainda está sendo preenchida.
           </p>
           <p class="small">
-            Depois de editar um documento, rode
-            <code>python3 tools/build_grimorio.py</code> para regerar as páginas.
+            Nada foi inventado para ficar bonito. Se a informação não existe, o buraco aparece.
           </p>
         </div>
       </div>
@@ -658,9 +657,9 @@ def build_page_index(ordered: list[Doc]) -> str:
   </section>"""
 
     return page(
-        "Grimório — documentação aberta do Cod Rebel DJ",
-        "Documentação pública do Cod Rebel DJ: identidade, repertório, trajetória, shows, "
-        "equipamentos, projetos e aprendizados. Os arquivos Markdown do repositório publicados na íntegra.",
+        "Grimório · documentação aberta do Cod Rebel DJ",
+        "Documentação do trabalho do Cod Rebel DJ: identidade, repertório, trajetória, shows, "
+        "equipamentos, projetos e aprendizados, publicados sem filtro.",
         SITE_URL + "grimorio.html",
         "grimorio",
         "",
@@ -725,23 +724,11 @@ def build_doc_page(doc: Doc, markdown: str, position: int, ordered: list[Doc]) -
       </article>
 
 {build_pager(ordered, position)}
-
-      <div class="note" style="margin-top: clamp(1.75rem, 4vw, 2.5rem);">
-        <p class="note__title">Documento gerado a partir do Markdown</p>
-        <p>
-          Esta página é a conversão de <code>{esc(doc.source)}</code>. O arquivo Markdown no
-          repositório é a fonte de verdade — se as duas versões divergirem, vale o
-          <code>.md</code>.
-        </p>
-        <p class="small">
-          <a class="link-arrow" href="../{esc(doc.source)}">Abrir o arquivo original</a>
-        </p>
-      </div>
     </div>
   </section>"""
 
     return page(
-        "%s — Grimório Cod Rebel DJ" % doc.title,
+        "%s · Grimório Cod Rebel DJ" % doc.title,
         doc.summary,
         "%sgrimorio/%s.html" % (SITE_URL, doc.slug),
         "grimorio",
