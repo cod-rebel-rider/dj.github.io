@@ -79,7 +79,7 @@ DOCS = [
     Doc("trajetoria", "docs/trajetoria.md", "Trajetória", "registros",
         "Linha do tempo do que já aconteceu e os próximos objetivos."),
     Doc("shows", "docs/shows.md", "Shows", "registros",
-        "Registros das apresentações realizadas, com local, formato e público estimado."),
+        "Registros das apresentações realizadas, com data, evento, local e cidade."),
     Doc("equipamentos", "docs/equipamentos.md", "Equipamentos", "estrutura",
         "Controladora, notebook, controlador MIDI, mixer, cabos e as próximas aquisições."),
     Doc("projetos", "docs/projetos.md", "Projetos", "projetos",

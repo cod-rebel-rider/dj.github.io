@@ -90,7 +90,7 @@ Essa meta pode mudar conforme a carreira evolui.
 
 ### Experiência
 
-* 6 apresentações com a Fallen EV Tributo
+* 5 apresentações com a Fallen EV Tributo
 * 2 apresentações como DJ solo
 * Experiência em eventos para aproximadamente 50–100 pessoas
 * Experiência em casas, eventos independentes e apresentações públicas
@@ -99,10 +99,11 @@ Essa meta pode mudar conforme a carreira evolui.
 
 Entre as experiências realizadas estão:
 
-* Moto Rock e Cia · Taguatinga
+* Moto Rock e Moto Rock Pub · QNJ 18, Taguatinga
+* Toinha Brasil Show · SOF Sul, Brasília
 * Galpão 17 · Guará
-* Evento do Governo · Guará
 * Boemia Gabriela · Paranoá
+* Evento do Governo · Guará
 
 ### Estrutura atual
 
