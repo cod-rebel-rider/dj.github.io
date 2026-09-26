@@ -12,6 +12,7 @@ Registros visuais do projeto.
 | `logo-cod-rebel-dj.svg` | marca escrita em SVG, para presskit e divulgação |
 | `sinal.svg` | gráfico decorativo de sinal/onda (usado no terminal da home) |
 | `cod-rebel-dj-01.png` | primeiro registro visual real publicado (home, seção 03) |
+| `qr-code-pix.png` | QR Code do PIX usado no bloco de apoio financeiro (`apoie.html`), 220×220 |
 | `registro-placeholder.svg` | moldura de **registro visual pendente** |
 | `og.png` | imagem de compartilhamento (Open Graph), 1200×630 |
 
@@ -43,4 +44,6 @@ como pendente. Ele deve ser substituído quando existirem fotos e vídeos reais.
 - otimizar antes de commitar (JPG/WebP, largura máxima ~2000px);
 - nomear em minúsculas, sem espaços e com data quando fizer sentido
   (ex.: `2026-moto-rock-cia-01.jpg`);
-- toda imagem precisa de `alt` descritivo no HTML (ou `alt=""` se for decorativa).
+- toda imagem precisa de `alt` descritivo no HTML (ou `alt=""` se for decorativa);
+- `qr-code-pix.png` é a chave PIX de verdade: não aplicar filtro, inverter ou recolorir, e
+  sempre exibir sobre fundo branco, senão o leitor do banco não reconhece o código.

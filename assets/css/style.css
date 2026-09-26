@@ -868,7 +868,7 @@ button { font: inherit; color: inherit; }
   box-shadow: 0 0 0 3px var(--red-dim);
 }
 
-/* 16. COMPOSIÇÃO
+/* 14. COMPOSIÇÃO
    ========================================================================== */
 .split {
   display: grid;
@@ -903,7 +903,46 @@ button { font: inherit; color: inherit; }
 }
 .tag-list a:hover { border-color: var(--red); color: var(--ink); text-decoration: none; }
 
-/* 14. ENTRADA DISCRETA
+/* 15. PAGAMENTO / APOIO FINANCEIRO
+   O QR do PIX é preto sobre branco: a moldura clara existe para o leitor do banco
+   reconhecer o código, então não vira o estilo escuro do site. */
+.pay {
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--red);
+  background: var(--bg-2);
+  padding: 1rem 1.1rem 1.15rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+.pay__grid {
+  display: grid;
+  gap: 1.25rem clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: .9rem;
+}
+@media (min-width: 560px) {
+  .pay__grid { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+}
+.pay__qr { margin: 0; }
+.pay__qr img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  padding: .6rem;
+  background: #fff;
+  border: 1px solid var(--line-2);
+}
+.pay__qr-cap {
+  margin-top: .5rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pay__side p { margin: 0 0 .9em; color: var(--muted); }
+.pay__side p:last-child { margin-bottom: 0; }
+.pay__side .btn-row { margin: 0 0 .9rem; }
+
+/* 16. ENTRADA DISCRETA
    ========================================================================== */
 [data-reveal-pending] { opacity: 0; transform: translateY(10px); }
 [data-revealed] {
@@ -912,7 +951,7 @@ button { font: inherit; color: inherit; }
   transition: opacity 420ms ease, transform 420ms ease;
 }
 
-/* 15. IMPRESSÃO
+/* 17. IMPRESSÃO
    ========================================================================== */
 @media print {
   body { background: #fff; color: #000; }
@@ -920,6 +959,8 @@ button { font: inherit; color: inherit; }
   .site-foot { border-top: 1px solid #999; }
   a { color: #000; }
   .prose { color: #000; max-width: none; }
+  .pay { border-color: #999; }
+  .pay__qr-cap { color: #333; }
 }
 
 

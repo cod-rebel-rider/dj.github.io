@@ -253,7 +253,9 @@ Ficam como espaço reservado, marcado no próprio site, até existir informaçã
 * canais de contato em `contato.html`: resolvido. E-mail para booking e imprensa
   (`cod-rebel@proton.me`), Transmissão Piara no WhatsApp como canal de avisos e Instagram para
   conversa direta;
-* forma de apoio financeiro em `apoie.html`;
+* forma de apoio financeiro em `apoie.html`: resolvido. PIX por QR Code
+  (`assets/images/qr-code-pix.png`) e link de pagamento no cartão
+  (`https://link.infinitepay.io/cod-rebel-rider?origin=link-na-bio`);
 * presskit em `assets/presskit/`;
 * fotos reais de apresentações e do setup (`registro-placeholder.svg`).
 
