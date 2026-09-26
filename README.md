@@ -250,7 +250,9 @@ O site fala em **primeira pessoa**, como o artista falando de si. Regras prátic
 
 Ficam como espaço reservado, marcado no próprio site, até existir informação real:
 
-* canais de contato em `contato.html` (e-mail, WhatsApp, Instagram, booking);
+* canais de contato em `contato.html`: resolvido. E-mail para booking e imprensa
+  (`cod-rebel@proton.me`), Transmissão Piara no WhatsApp como canal de avisos e Instagram para
+  conversa direta;
 * forma de apoio financeiro em `apoie.html`;
 * presskit em `assets/presskit/`;
 * fotos reais de apresentações e do setup (`registro-placeholder.svg`).
