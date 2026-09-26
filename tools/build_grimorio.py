@@ -487,7 +487,7 @@ def page_head(title: str, description: str, canonical: str, prefix: str, current
 <meta name="twitter:description" content="{url_desc}">
 <meta name="twitter:image" content="{og_image}">
 
-<link rel="icon" href="{prefix}assets/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{prefix}assets/images/favicon.png" type="image/png">
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>

@@ -6,8 +6,7 @@ Registros visuais do projeto.
 
 | Arquivo | Uso |
 | --- | --- |
-| `favicon.svg` | ícone do site (`//_`) |
-| `favicon.png` | ícone do site em PNG, usado por navegadores que não leem SVG |
+| `favicon.png` | ícone do site (`//_`), 32×32. É o **único** favicon do projeto: todas as páginas apontam para ele |
 | `logo.png` | marca rasterizada, 1254×1254 (usada no topo da home) |
 | `logo-cod-rebel-dj.svg` | marca escrita em SVG, para presskit e divulgação |
 | `sinal.svg` | gráfico decorativo de sinal/onda (usado no terminal da home) |
@@ -45,5 +44,10 @@ como pendente. Ele deve ser substituído quando existirem fotos e vídeos reais.
 - nomear em minúsculas, sem espaços e com data quando fizer sentido
   (ex.: `2026-moto-rock-cia-01.jpg`);
 - toda imagem precisa de `alt` descritivo no HTML (ou `alt=""` se for decorativa);
+- o favicon é referenciado por **caminho relativo** a cada página (`assets/images/favicon.png`
+  na raiz, `../assets/...` no grimório, `../../assets/...` em `projetos/*`). Ao criar uma página
+  nova, copiar a tag de uma página do mesmo diretório. Se o arquivo mudar de nome ou de
+  extensão, atualizar também o template em `tools/build_grimorio.py`, senão o grimório gerado
+  volta a apontar para um caminho inexistente;
 - `qr-code-pix.png` é a chave PIX de verdade: não aplicar filtro, inverter ou recolorir, e
   sempre exibir sobre fundo branco, senão o leitor do banco não reconhece o código.
