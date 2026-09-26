@@ -84,8 +84,8 @@ DOCS = [
         "Controladora, notebook, controlador MIDI, mixer, cabos e as próximas aquisições."),
     Doc("projetos", "docs/projetos.md", "Projetos", "projetos",
         "Minha frente principal, meus sets autorais, produção e projetos paralelos."),
-    Doc("fallen", "docs/fallen.md", "Fallen EV Tributo", "projetos",
-        "Tributo ao Evanescence: atuação como DJ e experiência de palco."),
+    Doc("fallen", "docs/fallen.md", "ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ", "projetos",
+        "Banda de tributo ao Evanescence: sou membro e atuo como DJ."),
     Doc("aprendizados", "docs/aprendizados.md", "Aprendizados", "log",
         "Set flexível, mapeamento MIDI, roteamento de áudio e lições de palco."),
 ]
@@ -118,8 +118,20 @@ def strip_markup(text: str) -> str:
     return text.strip()
 
 
+# O nome da banda é escrito com small caps Unicode. Essas letras não têm
+# decomposição NFKD, então sem esta tradução elas entrariam inteiras nos ids
+# das âncoras. Cada caractere vira a letra ascii correspondente.
+SMALLCAPS = {
+    "ꜰ": "f", "ꜱ": "s",                        # Latin Extended-D
+    "ᴀ": "a", "ᴄ": "c", "ᴇ": "e", "ᴏ": "o",   # Phonetic Extensions
+    "ᴛ": "t", "ᴠ": "v",
+    "ɪ": "i", "ɴ": "n", "ʀ": "r", "ʙ": "b", "ʟ": "l",
+}
+
+
 def slugify(text: str) -> str:
-    text = unicodedata.normalize("NFKD", strip_markup(text))
+    text = "".join(SMALLCAPS.get(c, c) for c in strip_markup(text))
+    text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
     text = re.sub(r"[^\w\s-]", "", text.lower())
     text = re.sub(r"[\s_]+", "-", text).strip("-")

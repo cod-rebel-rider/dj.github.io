@@ -46,9 +46,9 @@ O repertório pode incorporar músicas mais comerciais quando fizerem sentido pa
 
 ---
 
-## 🎤 Fallen EV Tributo
+## 🎤 ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ
 
-Além do trabalho como Cod Rebel DJ, também atuo como DJ dentro da **Fallen EV Tributo**, projeto dedicado à música do Evanescence.
+Além do trabalho como Cod Rebel DJ, sou membro da **ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ**, banda de tributo ao Evanescence, e atuo como DJ dentro dela.
 
 Essa experiência faz parte da minha trajetória artística e profissional, especialmente por envolver:
 
@@ -90,7 +90,7 @@ Essa meta pode mudar conforme a carreira evolui.
 
 ### Experiência
 
-* 5 apresentações com a Fallen EV Tributo
+* 5 apresentações com a ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ
 * 2 apresentações como DJ solo
 * Experiência em eventos para aproximadamente 50–100 pessoas
 * Experiência em casas, eventos independentes e apresentações públicas

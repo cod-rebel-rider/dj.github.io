@@ -1,12 +1,11 @@
-# Fallen EV Tributo
+# ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ
 
 ## Sobre
 
-Projeto de tributo ao Evanescence.
+Banda de tributo ao Evanescence. Eu sou membro e atuo como DJ.
 
 ## Minha atuação
 
-- Vocal
 - DJ
 - Operação de VS
 - Preparação de apresentações
