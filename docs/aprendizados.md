@@ -58,9 +58,9 @@ O sinal estéreo do notebook é dividido em dois canais da mesa:
 
 O Pan de cada canal é utilizado para direcionar corretamente cada sinal para sua respectiva saída.
 
-#### Apresentação com a Fallen
+#### Apresentação com a ꜰᴀʟʟᴇɴ
 
-Quando toco com a Fallen, o sistema precisa trabalhar com diferentes destinos de áudio.
+Quando toco com a ꜰᴀʟʟᴇɴ, o sistema precisa trabalhar com diferentes destinos de áudio.
 
 **VS:**
 

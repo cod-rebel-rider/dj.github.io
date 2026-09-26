@@ -4,6 +4,19 @@
    Referências: terminal, caderno técnico, documentação de projeto, flyer.
    ========================================================================== */
 
+/* O nome da banda é escrito em small caps Unicode. Consolas (a fonte mono do
+   site) e as serifas não têm esses glifos, então o nome apareceria com caixas
+   vazias. Esta fonte cobre apenas os caracteres do nome: o navegador só a usa
+   nesses pontos, sem tocar no restante do texto.
+   ========================================================================== */
+@font-face {
+  font-family: "Small Caps";
+  src: local("Segoe UI"), local("Arial"), local("Helvetica Neue"),
+       local("Noto Sans"), local("DejaVu Sans"), local("Verdana"),
+       local("Tahoma"), local("Calibri");
+  unicode-range: U+A720-A7FF, U+1D00-1D7F, U+0250-02AF;
+}
+
 /* 1. TOKENS
    ========================================================================== */
 :root {
@@ -27,9 +40,11 @@
   --red-dim: rgba(224, 35, 28, .10);
   --red-glow: rgba(224, 35, 28, .32);
 
-  --font-mono: ui-monospace, "JetBrains Mono", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  /* "Small Caps" é a última da pilha de propósito: cobre só os caracteres do
+     nome da banda, então nunca interfere nos outros textos. */
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace, "Small Caps";
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif, "Small Caps";
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif, "Small Caps";
 
   --wrap: 1120px;
   --wrap-wide: 1320px;
@@ -193,17 +208,18 @@ button { font: inherit; color: inherit; }
   white-space: nowrap;
 }
 .brand:hover { color: var(--ink); text-decoration: none; }
-.brand__mark {
-  color: var(--red);
-  font-weight: 700;
-  letter-spacing: 0;
-}
-.brand__sub {
+/* A marca no cabeçalho é uma imagem horizontal (logo2.png, 2172 x 724). O
+   tamanho é dado pela altura, e não pela largura, para a barra continuar
+   com a altura mínima de 4.5rem em todas as larguras. 2.5rem preenche bem
+   a barra; no celular cai para 2rem para sobrar espaço ao menu. */
+.brand__logo {
   display: block;
-  font-size: .56rem;
-  font-weight: 400;
-  letter-spacing: .2em;
-  color: var(--muted);
+  height: 2.5rem;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 460px) {
+  .brand__logo { height: 2rem; }
 }
 
 .nav {
@@ -422,10 +438,6 @@ button { font: inherit; color: inherit; }
   letter-spacing: -.03em;
   text-transform: uppercase;
   margin-bottom: 1rem;
-}
-.hero__title span {
-  display: block;
-  color: var(--red);
 }
 
 .hero__tags {
@@ -818,6 +830,14 @@ button { font: inherit; color: inherit; }
   margin-bottom: .6rem;
 }
 .foot-brand span { color: var(--red); }
+/* A marca no rodapé é a versão quadrada (logo.png), usada como selo. */
+.foot-brand__logo {
+  display: block;
+  height: 10rem;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: .8rem;
+}
 .foot-bottom {
   display: flex;
   flex-wrap: wrap;

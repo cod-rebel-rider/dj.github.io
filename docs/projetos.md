@@ -16,6 +16,6 @@ Desenvolvimento de sets autorais.
 
 Futuros edits, mashups e remixes.
 
-## Fallen EV Tributo
+## ꜰᴀʟʟᴇɴ ᴇᴠᴀɴᴇꜱᴄᴇɴᴄᴇ ᴛʀɪʙᴜᴛᴏ
 
-Trabalho musical paralelo.
+Banda de tributo ao Evanescence. Sou membro e atuo como DJ.
